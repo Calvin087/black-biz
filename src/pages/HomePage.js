@@ -1,8 +1,8 @@
 import React from "react";
 import LogoBarOnly from "../components/LogoBarOnly";
 import HomeFourBlock from "../components/HomeFourBlock";
-import FullWidthIntroLeft from '../components/FullWidthIntroLeft'
-import ButtonUI from '../components/ButtonUI'
+import FullWidthIntroLeft from "../components/FullWidthIntroLeft";
+import ButtonUI from "../components/ButtonUI";
 
 const HomePage = () => {
   return (
@@ -62,10 +62,42 @@ const HomePage = () => {
 
       {/* End Of Four Block */}
 
-      <FullWidthIntroLeft />
-      <FullWidthIntroLeft />
-      <FullWidthIntroLeft />
-      <FullWidthIntroLeft />
+      <FullWidthIntroLeft
+        bgColour={"#16213a"}
+        title={"Local Black Owned Business List."}
+        content={
+          "Unlike other directories, our black owned business list is 100% free. Each listing is manually audited to ensure legitimate businesses listings."
+        }
+        image={"../images/full-width-intro-biz.jpg"}
+        buttonContent={"Shop Local"}
+      />
+      <FullWidthIntroLeft
+        bgColour={"#1e3142"}
+        title={"Books on Essential Financial Literacy"}
+        content={
+          "Ensuring that our children are financially literate is the key to generational success and continued community growth."
+        }
+        image={"../images/full-width-intro-books.jpg"}
+        buttonContent={"Start Investing"}
+      />
+      <FullWidthIntroLeft
+        bgColour={"#27444c"}
+        title={"Entreprenuer & CEO Interviews"}
+        content={
+          "A collection of interviews and inspirational videos of black business owners. Learn how the beat the odds and how you can do it too."
+        }
+        image={"../images/full-width-intro-ceo.jpg"}
+        buttonContent={"Get Inspired"}
+      />
+      <FullWidthIntroLeft
+        bgColour={"#335446"}
+        title={"Online Courses & Free Education"}
+        content={
+          "Software development is a lucrative career that is lacking diversity. Change the industry with our list of free courses and learning resources."
+        }
+        image={"../images/full-width-intro-edu.jpg"}
+        buttonContent={"Earn More"}
+      />
     </div>
   );
 };
