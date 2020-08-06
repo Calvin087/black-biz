@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonUI from '../components/ButtonUI'
 
 const FullWidthIntroLeft = () => {
   return (
@@ -10,7 +11,11 @@ const FullWidthIntroLeft = () => {
           Each listing is manually audited to ensure legitimate businesses
           listings.
         </p>
-        <button />
+        <ButtonUI
+          borderCol={"#16213a"}
+          content={"Get Started"}
+          color={"#16213a"}
+        />
       </div>
 
       <div>

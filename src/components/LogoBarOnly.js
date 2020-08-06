@@ -4,7 +4,7 @@ const LogoBarOnly = () => {
     return (
       <div>
         <div id="logo">
-          <img src="../images/black-logo.jpg" />
+          <img src="../images/black-logo.jpg" className="h-6 w-auto" />
         </div>
       </div>
     );
