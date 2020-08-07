@@ -3,12 +3,13 @@ import LogoBarOnly from "../components/LogoBarOnly";
 import HomeFourBlock from "../components/HomeFourBlock";
 import FullWidthIntroLeft from "../components/FullWidthIntroLeft";
 import ButtonUI from "../components/ButtonUI";
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
     <div>
       <div className="px-8 pt-6">
-        <LogoBarOnly />
+        <LogoBarOnly size={"200px"} />
       </div>
 
       {/* Start Of Hero */}
@@ -98,6 +99,10 @@ const HomePage = () => {
         image={"../images/full-width-intro-edu.jpg"}
         buttonContent={"Earn More"}
       />
+
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

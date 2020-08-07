@@ -1,10 +1,14 @@
 import React from 'react'
 
-const LogoBarOnly = () => {
+const LogoBarOnly = (props) => {
     return (
       <div>
         <div id="logo">
-          <img src="../images/black-logo.jpg" className="h-6 w-auto" />
+          <img
+            src="../images/black-logo.jpg"
+            width={props.size}
+            style={{ margin: props.center, padding: props.padding }}
+          />
         </div>
       </div>
     );
