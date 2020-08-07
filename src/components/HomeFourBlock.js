@@ -5,7 +5,7 @@ const HomeFourBlock = (props) => {
       <div>
         {/* Block One */}
         <div
-          className="p-6 mx-4"
+          className="p-6 mx-4 sm:mx-0 sm:pr-6"
           style={{ backgroundColor: props.bgColour }}
         >
           <h3
@@ -18,9 +18,19 @@ const HomeFourBlock = (props) => {
 
           {/* Start Of Block Content */}
           <div>
-            <p className="text-white font-light text-l">
+            <p className="text-white font-light text-sm">
               {props.content}
-              <i className="fas fa-arrow-circle-right pl-4"></i>
+              <svg
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 inline ml-2"
+              >
+                <path d="M9 5l7 7-7 7"></path>
+              </svg>
             </p>
           </div>
           {/* End Of Block Content */}

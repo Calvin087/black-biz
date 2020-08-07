@@ -3,22 +3,23 @@ import LogoBarOnly from "../components/LogoBarOnly";
 import HomeFourBlock from "../components/HomeFourBlock";
 import FullWidthIntroLeft from "../components/FullWidthIntroLeft";
 import ButtonUI from "../components/ButtonUI";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
     <div>
-      <div className="px-8 pt-6">
-        <LogoBarOnly size={"200px"} />
-      </div>
-
       {/* Start Of Hero */}
-      <div id="hero">
-        <div id="hero-left" className="p-8 mt-4">
-          <h2 className="text-4xl text-blue-900 pb-2">
-            Supporting The Black Economy
+      <div id="hero" className="sm:flex sm:px-16 sm:pt-6 container m-auto">
+        {/* Start Of Hero Left */}
+        <div id="hero-left" className="p-8 mt-4 sm:p-0 sm:w-2/4 sm:pr-24">
+          
+        <LogoBarOnly size={"50%"} />
+
+          <h2 className="text-4xl sm:text-5xl mt-8 pb-2 sm:mt-24" style={{color: "#16213a"}}>
+            Supporting The Black Economy.
           </h2>
-          <p className="text-l text-gray-800 font-light mb-8">
+          
+          <p className="text-l text-gray-800 font-thin mb-8 sm:text-2xl">
             We aim to curate and share the most powerful content to aid in the
             success of the generations that will follow us.
           </p>
@@ -29,16 +30,21 @@ const HomePage = () => {
             color={"#16213a"}
           />
         </div>
+        {/* End Of Hero Left */}
+
+        {/* Start Of Hero Right */}
 
         <div id="hero-right">
           <img src="../images/big-kid-header.jpg" />
         </div>
       </div>
+      {/* End Of Hero Right */}
+
       {/* End Of Hero */}
 
       {/* Start Of Four Block */}
 
-      <div className="my-6">
+      <div className="my-6 sm:flex sm:-mt-48 sm:mb-48 sm:container sm:m-auto sm:pl-10">
         <HomeFourBlock
           bgColour={"#16213a"}
           title={"Community Support"}
@@ -46,7 +52,7 @@ const HomePage = () => {
         />
         <HomeFourBlock
           bgColour={"#1e3142"}
-          title={"Financial Education"}
+          title={"Financial Literacy"}
           content={"The missingschool lessons"}
         />
         <HomeFourBlock

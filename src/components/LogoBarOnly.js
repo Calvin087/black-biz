@@ -5,7 +5,7 @@ const LogoBarOnly = (props) => {
       <div>
         <div id="logo">
           <img
-            src="../images/black-logo.jpg"
+            src="../images/black-logo.svg"
             width={props.size}
             style={{ margin: props.center, padding: props.padding }}
           />
