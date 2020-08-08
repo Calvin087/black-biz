@@ -8,15 +8,15 @@ import OnlineEducation from '../pages/OnlineEducation';
 
 function AppRouter() {
     return (
-        <Switch>
-            <Route path='/' component={HomePage} exact={true} />
-            <Route path='/black-business-directory' component={BizDirectory} />
-            <Route path='/books' component={BookList} />
-            <Route path='/black-ceo-interviews' component={CEOInterviews} />
-            <Route path='/online-education' component={OnlineEducation} />
-            <Route />
-        </Switch>
-    )
+      <Switch>
+        <Route path="/" component={BizDirectory} exact={true} />
+        <Route path="/black-business-directory" component={BizDirectory} />
+        <Route path="/books" component={BookList} />
+        <Route path="/black-ceo-interviews" component={CEOInterviews} />
+        <Route path="/online-education" component={OnlineEducation} />
+        <Route />
+      </Switch>
+    );
 }
 
 export default AppRouter
