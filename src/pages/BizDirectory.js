@@ -3,6 +3,8 @@ import NavigationBar from '../components/NavigationBar'
 import BusinessSelectForm from '../components/BusinessSelectForm'
 import BusinessCard from '../components/BusinessCard'
 import BookCard from '../components/BookCard'
+import YoutubeCard from '../components/YoutubeCard'
+import EducationCard from '../components/EducationCard'
 
 const BizDirectory = () => {
     return (
@@ -47,14 +49,10 @@ const BizDirectory = () => {
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
+          <EducationCard />
+          <YoutubeCard />
           <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
-          <BookCard />
+          <BusinessCard />
         </div>
         {/* End Of Cards */}
       </div>

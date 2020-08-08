@@ -2,6 +2,20 @@ import React from "react";
 import ButtonUI from "../components/ButtonUI";
 
 const BookCard = () => {
+  
+  let clamp3 = {
+    WebkitLineClamp: "3",
+    overflow: "hidden",
+    display: "-webkit-box",
+    WebkitBoxOrient: "vertical",
+  };
+
+  let clamp2 = {
+    WebkitLineClamp: "2",
+    overflow: "hidden",
+    display: "-webkit-box",
+    WebkitBoxOrient: "vertical",
+  };
 
   return (
     <div className="sm:w-1/4 p-2 mb-6">
@@ -15,13 +29,7 @@ const BookCard = () => {
       >
         <div className="p-4">
           <h2
-            style={{
-              color: "#16213a",
-              WebkitLineClamp: "2",
-              overflow: "hidden",
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-            }}
+            style={clamp2}
             className="text-2xl"
           >
             The Adventurers and the City of Secrets
@@ -44,12 +52,7 @@ const BookCard = () => {
 
           <p
             className="text-sm text-gray-700"
-            style={{
-              WebkitLineClamp: "3",
-              overflow: "hidden",
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-            }}
+            style={clamp3}
           >
             Vanessa Wye was fifteen-years-old when she first had sex with her
             English teacher. She is now thirty-two and in the storm of
@@ -61,7 +64,7 @@ const BookCard = () => {
         <div className="p-4">
           <ButtonUI
             borderCol={"#16213a"}
-            content={"Visit Website"}
+            content={"Visit Amazon"}
             color={"#16213a"}
           />
         </div>

@@ -2,6 +2,20 @@ import React from 'react'
 import ButtonUI from '../components/ButtonUI'
 
 const BusinessCard = () => {
+    let clamp3 = {
+      WebkitLineClamp: "3",
+      overflow: "hidden",
+      display: "-webkit-box",
+      WebkitBoxOrient: "vertical",
+    };
+
+    let clamp2 = {
+      WebkitLineClamp: "2",
+      overflow: "hidden",
+      display: "-webkit-box",
+      WebkitBoxOrient: "vertical",
+    };
+
     return (
       <div className="sm:w-1/4 p-2">
         <div
@@ -16,17 +30,12 @@ const BusinessCard = () => {
           </div>
 
           <div className="p-4">
-            <h2 style={{ color: "#16213a" }} className="text-2xl mb-2">
+            <h2 style={{ color: "#16213a" }, clamp2} className="text-2xl mb-2">
               La Pasa Gin Bar
             </h2>
             <p
               className="text-sm text-gray-700"
-              style={{
-                WebkitLineClamp: "3",
-                overflow: "hidden",
-                display: "-webkit-box",
-                WebkitBoxOrient: "vertical",
-              }}
+              style={clamp3}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
               fringilla ipsum. Proin diam nibh, varius vel sapien a, efficitur
