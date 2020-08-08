@@ -35,9 +35,11 @@ const NavigationBar = (props) => {
         {/* Start of Nav Links */}
         <div class={isOpen ? "block" : "hidden sm:block"}>
           <div className="px-2 sm:flex">
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Link 1</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Link 2</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Link 3</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Business Listings</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Finance Books</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">CEO Interviews</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Education</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Blog</a>
           </div>
         </div>
         {/* End of Nav Links */}

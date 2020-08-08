@@ -2,23 +2,18 @@ import React from 'react'
 import NavigationBar from '../components/NavigationBar'
 import BusinessSelectForm from '../components/BusinessSelectForm'
 import BusinessCard from '../components/BusinessCard'
+import BookCard from '../components/BookCard'
 
 const BizDirectory = () => {
     return (
       <div>
-        <div>
+        <div className="sm:pt-6">
           <NavigationBar />
         </div>
 
-        {/* Start Of Cards */}
-        <div className="container m-auto p-4 w-full">
-          <BusinessCard />
-        </div>
-        {/* End Of Cards */}
-
         {/* Start Of Hero */}
-        <div className="container m-auto p-4">
-          <div className="p-8" style={{ backgroundColor: "#16213a" }}>
+        <div className="container m-auto p-4 sm:px-16 sm:flex">
+          <div className="p-8 sm:w-1/3" style={{ backgroundColor: "#16213a" }}>
             <h2
               className="text-2xl sm:text-3xl font-thin pb-4"
               style={{ color: "#d3ccb5" }}
@@ -32,17 +27,36 @@ const BizDirectory = () => {
             </p>
           </div>
 
-          {/* End Of Hero */}
-          <div className="hidden">
-            <img src="../images/full-width-intro-biz.jpg" />
-          </div>
-          {/* End Of Hero */}
+          {/* Start Of right image */}
+          <div
+            className="hidden sm:block w-2/3"
+            style={{
+              backgroundImage: `url("../images/full-width-intro-biz.jpg")`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          {/* Start Of right image */}
         </div>
         {/* End Of Hero */}
 
         {/* Start Of Filter Form */}
-        <BusinessSelectForm />
+        <div className="container m-auto sm:px-12 sm:pb-6">
+          <BusinessSelectForm />
+        </div>
         {/* End Of Filter Form */}
+
+        {/* Start Of Cards */}
+        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
+          <BookCard />
+          <BookCard />
+          <BookCard />
+          <BookCard />
+          <BookCard />
+          <BookCard />
+          <BookCard />
+          <BookCard />
+        </div>
+        {/* End Of Cards */}
       </div>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const BusinessSelectForm = () => {
     return (
-      <div>
+      <div className="md:flex md:justify-between">
         <div class="md:w-1/3 px-4 mb-6 md:mb-0">
           <label class="block text-gray-700 text-xs mb-2">Country</label>
           <div class="relative">

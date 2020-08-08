@@ -110,10 +110,6 @@ const HomePage = () => {
           buttonContent={"Earn More"}
         />
       </div>
-
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 };

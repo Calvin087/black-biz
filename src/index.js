@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import AppRouter from './routers/AppRouter'
+import Footer from '../src/components/Footer'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRouter />  
+      <AppRouter />
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
