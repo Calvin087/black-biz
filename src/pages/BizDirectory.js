@@ -8,8 +8,11 @@ import EducationCard from '../components/EducationCard'
 
 const BizDirectory = () => {
 
+  {/* Start Of state */}
   const [listings, setListings] = useState([])
+  {/* End Of state */}
 
+  {/* Start Of API Call */}
   const siteURL =
     "http://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=20";
 
@@ -28,8 +31,24 @@ const BizDirectory = () => {
     }
     loadlistings()
   }, [])
+{/* End Of API Call */}
 
-  console.log(listings[0]);
+{/* Start Of Helpers */}
+
+function dedupe(a) {
+  let tempArray = [];
+  listings.map((listing) => tempArray.push(listing.acf[a]));
+  let uniqueItem = new Set((tempArray));
+  let uniqueArray = Array.from(uniqueItem)
+  return uniqueArray;
+}
+
+let cityList = dedupe("city");
+let countryList = dedupe("country");
+let categoriesList = dedupe("categories");
+
+{/* End Of Helpers */}
+
     return (
       <div>
         <div className="sm:pt-6">
@@ -66,17 +85,19 @@ const BizDirectory = () => {
 
         {/* Start Of Filter Form */}
         <div className="container m-auto sm:px-12 sm:pb-6">
-          <BusinessSelectForm />
+          <BusinessSelectForm
+            city={cityList}
+            country={countryList}
+            categories={categoriesList}
+          />
         </div>
         {/* End Of Filter Form */}
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-            
-            {listings.map((listing, index) => (
-              <BusinessCard {...listing} />
-            ))}
-        
+          {listings.map((listing) => (
+            <BusinessCard key={listing.id} {...listing} />
+          ))}
         </div>
         {/* End Of Cards */}
       </div>

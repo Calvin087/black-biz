@@ -1,6 +1,7 @@
 import React from 'react'
 
-const BusinessSelectForm = () => {
+const BusinessSelectForm = (props) => {
+
     return (
       <div className="md:flex md:justify-between">
         <div className="md:w-1/3 px-4 mb-6 md:mb-0">
@@ -10,9 +11,10 @@ const BusinessSelectForm = () => {
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
-              <option>New Mexico</option>
-              <option>Missouri</option>
-              <option>Texas</option>
+              {props.country.map((country) => (
+                <option key={country}>{country}</option>
+              ))}
+
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -32,9 +34,10 @@ const BusinessSelectForm = () => {
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
-              <option>New Mexico</option>
-              <option>Missouri</option>
-              <option>Texas</option>
+              {props.city.map((city) => (
+                <option key={city}>{city}</option>
+              ))}
+
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -54,9 +57,10 @@ const BusinessSelectForm = () => {
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
-              <option>New Mexico</option>
-              <option>Missouri</option>
-              <option>Texas</option>
+              {props.categories.map((categories) => (
+                <option key={categories}>{categories}</option>
+              ))}
+
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
