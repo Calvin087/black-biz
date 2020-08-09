@@ -29,7 +29,7 @@ const BizDirectory = () => {
     loadlistings()
   }, [])
 
-  console.log(listings);
+  console.log(listings[0]);
     return (
       <div>
         <div className="sm:pt-6">
@@ -72,10 +72,11 @@ const BizDirectory = () => {
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-          <EducationCard />
-          <YoutubeCard />
-          <BookCard />
-          <BusinessCard />
+            
+            {listings.map((listing, index) => (
+              <BusinessCard {...listing} />
+            ))}
+        
         </div>
         {/* End Of Cards */}
       </div>
