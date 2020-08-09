@@ -3,20 +3,20 @@ import React from 'react'
 const BusinessSelectForm = () => {
     return (
       <div className="md:flex md:justify-between">
-        <div class="md:w-1/3 px-4 mb-6 md:mb-0">
-          <label class="block text-gray-700 text-xs mb-2">Country</label>
-          <div class="relative">
+        <div className="md:w-1/3 px-4 mb-6 md:mb-0">
+          <label className="block text-gray-700 text-xs mb-2">Country</label>
+          <div className="relative">
             <select
-              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
               <option>New Mexico</option>
               <option>Missouri</option>
               <option>Texas</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -25,20 +25,20 @@ const BusinessSelectForm = () => {
             </div>
           </div>
         </div>
-        <div class="md:w-1/3 px-4 mb-6 md:mb-0">
-          <label class="block text-gray-700 text-xs mb-2">City</label>
-          <div class="relative">
+        <div className="md:w-1/3 px-4 mb-6 md:mb-0">
+          <label className="block text-gray-700 text-xs mb-2">City</label>
+          <div className="relative">
             <select
-              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
               <option>New Mexico</option>
               <option>Missouri</option>
               <option>Texas</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -47,20 +47,20 @@ const BusinessSelectForm = () => {
             </div>
           </div>
         </div>
-        <div class="md:w-1/3 px-4 mb-6 md:mb-0">
-          <label class="block text-gray-700 text-xs mb-2">Industry</label>
-          <div class="relative">
+        <div className="md:w-1/3 px-4 mb-6 md:mb-0">
+          <label className="block text-gray-700 text-xs mb-2">Industry</label>
+          <div className="relative">
             <select
-              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
               <option>New Mexico</option>
               <option>Missouri</option>
               <option>Texas</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
-                class="fill-current h-4 w-4"
+                className="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >

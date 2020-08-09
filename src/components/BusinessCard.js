@@ -30,13 +30,13 @@ const BusinessCard = () => {
           </div>
 
           <div className="p-4">
-            <h2 style={{ color: "#16213a" }, clamp2} className="text-2xl mb-2">
+            <h2
+              style={({ color: "#16213a" }, clamp2)}
+              className="text-2xl mb-2"
+            >
               La Pasa Gin Bar
             </h2>
-            <p
-              className="text-sm text-gray-700"
-              style={clamp3}
-            >
+            <p className="text-sm text-gray-700" style={clamp3}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
               fringilla ipsum. Proin diam nibh, varius vel sapien a, efficitur
               mollis lorem. Nunc pretium, justo id tempor ullamcorper, felis
@@ -52,9 +52,9 @@ const BusinessCard = () => {
               <svg
                 className="w-6 sm:w-8 inline mr-2 -mt-4"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
@@ -67,9 +67,9 @@ const BusinessCard = () => {
               <svg
                 className="w-6 inline mr-1"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >

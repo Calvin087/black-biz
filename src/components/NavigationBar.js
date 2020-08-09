@@ -16,9 +16,9 @@ const NavigationBar = (props) => {
               onClick={() => setOpen(!isOpen)}
               className="h-6 block"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -33,13 +33,23 @@ const NavigationBar = (props) => {
         {/* End of Burger */}
 
         {/* Start of Nav Links */}
-        <div class={isOpen ? "block" : "hidden sm:block"}>
+        <div className={isOpen ? "block" : "hidden sm:block"}>
           <div className="px-2 sm:flex">
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Business Listings</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Finance Books</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">CEO Interviews</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Education</a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">Blog</a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+              Business Listings
+            </a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+              Finance Books
+            </a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+              CEO Interviews
+            </a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+              Education
+            </a>
+            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+              Blog
+            </a>
           </div>
         </div>
         {/* End of Nav Links */}

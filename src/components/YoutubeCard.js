@@ -27,21 +27,18 @@ let clamp2 = {
             width="100%"
             height="auto"
             src="https://www.youtube.com/embed/OWJ2A1D951M"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
 
         <div className="p-4">
-          <h2 style={{ color: "#16213a"}, clamp2 } className="text-2xl mb-2">
+          <h2 style={({ color: "#16213a" }, clamp2)} className="text-2xl mb-2">
             How about another joke, Murray? | Joker [UltraHD, HDR]
           </h2>
           <p className="text-sm text-gray-600 mb-2">Dec 30, 2019</p>
-          <p
-            className="text-sm text-gray-700 mb-4"
-            style={clamp3}
-          >
+          <p className="text-sm text-gray-700 mb-4" style={clamp3}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
             fringilla ipsum. Proin diam nibh, varius vel sapien a, efficitur
             mollis lorem. Nunc pretium, justo id tempor ullamcorper, felis elit

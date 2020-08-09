@@ -9,9 +9,9 @@ const ButtonUI = (props) => {
       {props.content}
       <svg
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1"
         viewBox="0 0 24 24"
         stroke="currentColor"
         className="w-6 inline ml-8"

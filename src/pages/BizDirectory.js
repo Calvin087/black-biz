@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavigationBar from '../components/NavigationBar'
 import BusinessSelectForm from '../components/BusinessSelectForm'
 import BusinessCard from '../components/BusinessCard'
@@ -7,6 +7,29 @@ import YoutubeCard from '../components/YoutubeCard'
 import EducationCard from '../components/EducationCard'
 
 const BizDirectory = () => {
+
+  const [listings, setListings] = useState([])
+
+  const siteURL =
+    "http://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=20";
+
+  useEffect(() => {
+    async function loadlistings() {
+      const response = await fetch(siteURL)
+
+      if(!response.ok) {
+        console.log("content not loaded");
+        return
+      }
+
+      const results = await response.json()
+      setListings(results)
+
+    }
+    loadlistings()
+  }, [])
+
+  console.log(listings);
     return (
       <div>
         <div className="sm:pt-6">
