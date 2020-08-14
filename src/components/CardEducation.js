@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonUI from "../components/ButtonUI";
 
-const EducationCard = () => {
+const CardEducation = () => {
   let clamp3 = {
     WebkitLineClamp: "3",
     overflow: "hidden",
@@ -49,4 +49,4 @@ const EducationCard = () => {
   );
 };
 
-export default EducationCard;
+export default CardEducation;

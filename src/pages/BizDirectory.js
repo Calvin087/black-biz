@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import NavigationBar from '../components/NavigationBar'
 import BusinessSelectForm from '../components/BusinessSelectForm'
-import BusinessCard from '../components/BusinessCard'
-import BookCard from '../components/BookCard'
-import YoutubeCard from '../components/YoutubeCard'
-import EducationCard from '../components/EducationCard'
+import CardBusinesses from "../components/CardBusinesses";
+import CardBooks from "../components/CardBooks";
+import CardYoutube from '../components/CardYoutube'
+import CardEducation from "../components/CardEducation";
 
 const BizDirectory = () => {
 
@@ -39,17 +39,17 @@ const BizDirectory = () => {
 
 {/* Start Of Helpers */}
 
-function dedupe(a) {
+function dedupeListings(a) {
   let tempArray = [];
   listings.map((listing) => tempArray.push(listing.acf[a]));
   let uniqueItem = new Set((tempArray));
   let uniqueArray = Array.from(uniqueItem)
-  return uniqueArray;
+  return uniqueArray.sort();
 }
 
-let cityList = dedupe("city");
-let countryList = dedupe("country");
-let categoriesList = dedupe("categories");
+let cityList = dedupeListings("city");
+let countryList = dedupeListings("country");
+let categoriesList = dedupeListings("categories");
 
 {/* End Of Helpers */}
 
@@ -116,11 +116,11 @@ const filteredListings = listings.filter(
         
         {filteredListings != {} ? (
           filteredListings.map((listing) => (
-            <BusinessCard key={listing.id} {...listing} />
+            <CardBusinesses key={listing.id} {...listing} />
           ))
         ) : (
           listings.map((listing) => (
-            <BusinessCard key={listing.id} {...listing} />
+            <CardBusinesses key={listing.id} {...listing} />
           ))
             )
         }

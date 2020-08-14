@@ -1,7 +1,6 @@
 import React from "react";
-import ButtonUI from "../components/ButtonUI";
 
-const YoutubeCard = () => {
+const CardYoutube = () => {
 let clamp3 = {
   WebkitLineClamp: "3",
   overflow: "hidden",
@@ -53,4 +52,4 @@ let clamp2 = {
   );
 };
 
-export default YoutubeCard;
+export default CardYoutube;

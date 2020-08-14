@@ -24,6 +24,9 @@ function handleCategoriesChange(e) {
               id="grid-state"
               onChange={handleCountryChange}
             >
+              <option disabled selected>
+                Choose A Country
+              </option>
               {props.country.map((country) => (
                 <option key={country}>{country}</option>
               ))}
@@ -47,6 +50,9 @@ function handleCategoriesChange(e) {
               id="grid-state"
               onChange={handleCityChange}
             >
+              <option disabled selected>
+                Choose A City
+              </option>
               {props.city.map((city) => (
                 <option key={city}>{city}</option>
               ))}
@@ -70,6 +76,9 @@ function handleCategoriesChange(e) {
               id="grid-state"
               onChange={handleCategoriesChange}
             >
+              <option disabled selected>
+                Choose An Industry
+              </option>
               {props.categories.map((categories) => (
                 <option key={categories}>{categories}</option>
               ))}

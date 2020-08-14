@@ -1,8 +1,8 @@
 import React from "react";
 import ButtonUI from "../components/ButtonUI";
 
-const BookCard = () => {
-  
+const CardBooks = () => {
+
   let clamp3 = {
     WebkitLineClamp: "3",
     overflow: "hidden",
@@ -67,4 +67,4 @@ const BookCard = () => {
   );
 };
 
-export default BookCard;
+export default CardBooks;
