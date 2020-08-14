@@ -10,6 +10,10 @@ const BizDirectory = () => {
 
   {/* Start Of state */}
   const [listings, setListings] = useState([])
+  const [dropDownCity, setDropDownCity] = useState([]);
+  const [dropDownCountry, setDropDownCountry] = useState([]);
+  const [dropDownCategories, setDropDownCategories] = useState([]);
+
   {/* End Of state */}
 
   {/* Start Of API Call */}
@@ -48,6 +52,17 @@ let countryList = dedupe("country");
 let categoriesList = dedupe("categories");
 
 {/* End Of Helpers */}
+
+{/* Start Of Filters */}
+
+const filteredListings = listings.filter(
+  (listing) =>
+    listing.acf.city.includes(dropDownCity) &&
+    listing.acf.country.includes(dropDownCountry) &&
+    listing.acf.categories.includes(dropDownCategories)
+);
+
+{/* End Of Filters */}
 
     return (
       <div>
@@ -89,15 +104,27 @@ let categoriesList = dedupe("categories");
             city={cityList}
             country={countryList}
             categories={categoriesList}
+            onCityChange={setDropDownCity}
+            onCountryChange={setDropDownCountry}
+            onCategoriesChange={setDropDownCategories}
           />
         </div>
         {/* End Of Filter Form */}
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-          {listings.map((listing) => (
+        
+        {filteredListings != {} ? (
+          filteredListings.map((listing) => (
             <BusinessCard key={listing.id} {...listing} />
-          ))}
+          ))
+        ) : (
+          listings.map((listing) => (
+            <BusinessCard key={listing.id} {...listing} />
+          ))
+            )
+        }
+        
         </div>
         {/* End Of Cards */}
       </div>
@@ -105,3 +132,4 @@ let categoriesList = dedupe("categories");
 }
 
 export default BizDirectory
+
