@@ -108,4 +108,3 @@ let filteredCategories = [...new Set(categoriesList)];
 }
 
 export default BizDirectory
-

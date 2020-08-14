@@ -9,7 +9,7 @@ import OnlineEducation from '../pages/OnlineEducation';
 function AppRouter() {
     return (
       <Switch>
-        <Route path="/" component={BizDirectory} exact={true} />
+        <Route path="/" component={CEOInterviews} exact={true} />
         <Route path="/black-business-directory" component={BizDirectory} />
         <Route path="/books" component={BookList} />
         <Route path="/black-ceo-interviews" component={CEOInterviews} />
