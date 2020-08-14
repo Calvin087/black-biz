@@ -51,9 +51,11 @@ function getListValues(a) {
 const filteredListings = listings.filter(
   (listing) =>
     listing.acf.city.includes(dropDownCity) &&
-    listing.acf.country.includes(dropDownCountry) &&
-    listing.acf.categories.includes(dropDownCategories)
+    listing.acf.categories.includes(dropDownCategories) &&
+    listing.acf.country.includes(dropDownCountry)
 );
+
+console.log(filteredListings.length);
 
 let cityList = getListValues("city");
 let countryList = getListValues("country");
@@ -71,7 +73,9 @@ let filteredCategories = [...new Set(categoriesList)];
         <HeroInnerPage
           bgColor={"#16213a"}
           title={"Local Black Owned Business List."}
-          content={"Unlike other directories, our black owned business list is 100% free. Each listing is manually audited to ensure legitimate businesses listings."}
+          content={
+            "Unlike other directories, our black owned business list is 100% free. Each listing is manually audited to ensure legitimate businesses listings."
+          }
           bgImage={`url("../images/full-width-intro-biz.jpg")`}
         />
 
@@ -89,16 +93,16 @@ let filteredCategories = [...new Set(categoriesList)];
         {/* End Of Filter Form */}
 
         {/* Start Of Cards */}
-        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-          {filteredListings.length != 0
-            ? filteredListings.map((listing) => (
-                <CardBusinesses key={listing.id} {...listing} />
-              ))
-            : listings.map((listing) => (
-                <CardBusinesses key={listing.id} {...listing} />
-              ))}
+        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
+          {filteredListings.length === 0 ? (
+            <h2 className="text-center text-4xl pt-4 sm:pt-8 text-gray-600">Choose an Industry to start your search</h2>
+          ) : (
+            filteredListings.map((listing) => (
+              <CardBusinesses key={listing.id} {...listing} />
+            ))
+          )}
+          {/* End Of Cards */}
         </div>
-        {/* End Of Cards */}
       </div>
     );
 }
