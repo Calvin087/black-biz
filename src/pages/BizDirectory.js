@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NavigationBar from '../components/NavigationBar'
 import BusinessSelectForm from '../components/BusinessSelectForm'
 import CardBusinesses from "../components/CardBusinesses";
-import CardBooks from "../components/CardBooks";
-import CardYoutube from '../components/CardYoutube'
-import CardEducation from "../components/CardEducation";
+import HeroInnerPage from "../components/HeroInnerPage"
 
 const BizDirectory = () => {
 
@@ -70,33 +68,12 @@ const filteredListings = listings.filter(
           <NavigationBar />
         </div>
 
-        {/* Start Of Hero */}
-        <div className="container m-auto p-4 sm:px-16 sm:flex">
-          <div className="p-8 sm:w-1/3" style={{ backgroundColor: "#16213a" }}>
-            <h2
-              className="text-2xl sm:text-3xl font-thin pb-4"
-              style={{ color: "#d3ccb5" }}
-            >
-              Local Black Owned Business List.
-            </h2>
-            <p className="text-white font-thin sm:text-xl sm:mb-10">
-              Unlike other directories, our black owned business list is 100%
-              free. Each listing is manually audited to ensure legitimate
-              businesses listings.
-            </p>
-          </div>
-
-          {/* Start Of right image */}
-          <div
-            className="hidden sm:block w-2/3"
-            style={{
-              backgroundImage: `url("../images/full-width-intro-biz.jpg")`,
-              backgroundSize: "cover",
-            }}
-          ></div>
-          {/* Start Of right image */}
-        </div>
-        {/* End Of Hero */}
+        <HeroInnerPage
+          bgColor={"#16213a"}
+          title={"Local Black Owned Business List."}
+          content={"Unlike other directories, our black owned business list is 100% free. Each listing is manually audited to ensure legitimate businesses listings."}
+          bgImage={`url("../images/full-width-intro-biz.jpg")`}
+        />
 
         {/* Start Of Filter Form */}
         <div className="container m-auto sm:px-12 sm:pb-6">
@@ -113,18 +90,13 @@ const filteredListings = listings.filter(
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-        
-        {filteredListings != {} ? (
-          filteredListings.map((listing) => (
-            <CardBusinesses key={listing.id} {...listing} />
-          ))
-        ) : (
-          listings.map((listing) => (
-            <CardBusinesses key={listing.id} {...listing} />
-          ))
-            )
-        }
-        
+          {filteredListings != {}
+            ? filteredListings.map((listing) => (
+                <CardBusinesses key={listing.id} {...listing} />
+              ))
+            : listings.map((listing) => (
+                <CardBusinesses key={listing.id} {...listing} />
+              ))}
         </div>
         {/* End Of Cards */}
       </div>
