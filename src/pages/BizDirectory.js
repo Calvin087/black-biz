@@ -29,7 +29,6 @@ const BizDirectory = () => {
 
       const results = await response.json()
       setListings(results)
-
     }
     loadlistings()
   }, [])
@@ -37,17 +36,13 @@ const BizDirectory = () => {
 
 {/* Start Of Helpers */}
 
-function dedupeListings(a) {
+function getListValues(a) {
   let tempArray = [];
   listings.map((listing) => tempArray.push(listing.acf[a]));
-  let uniqueItem = new Set((tempArray));
-  let uniqueArray = Array.from(uniqueItem)
+  let uniqueItem = new Set(tempArray);
+  let uniqueArray = Array.from(uniqueItem).flat()
   return uniqueArray.sort();
 }
-
-let cityList = dedupeListings("city");
-let countryList = dedupeListings("country");
-let categoriesList = dedupeListings("categories");
 
 {/* End Of Helpers */}
 
@@ -59,6 +54,11 @@ const filteredListings = listings.filter(
     listing.acf.country.includes(dropDownCountry) &&
     listing.acf.categories.includes(dropDownCategories)
 );
+
+let cityList = getListValues("city");
+let countryList = getListValues("country");
+let categoriesList = getListValues("categories");
+let filteredCategories = [...new Set(categoriesList)];
 
 {/* End Of Filters */}
 
@@ -80,7 +80,7 @@ const filteredListings = listings.filter(
           <BusinessSelectForm
             city={cityList}
             country={countryList}
-            categories={categoriesList}
+            categories={filteredCategories}
             onCityChange={setDropDownCity}
             onCountryChange={setDropDownCountry}
             onCategoriesChange={setDropDownCategories}
@@ -90,7 +90,7 @@ const filteredListings = listings.filter(
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
-          {filteredListings != {}
+          {filteredListings.length != 0
             ? filteredListings.map((listing) => (
                 <CardBusinesses key={listing.id} {...listing} />
               ))
