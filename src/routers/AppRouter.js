@@ -5,11 +5,12 @@ import BizDirectory from '../pages/BizDirectory';
 import BookList from '../pages/BookList';
 import CEOInterviews from '../pages/CEOInterviews';
 import OnlineEducation from '../pages/OnlineEducation';
+import VideoPage from '../pages/VideoPage'
 
 function AppRouter() {
     return (
       <Switch>
-        <Route path="/" component={CEOInterviews} exact={true} />
+        <Route path="/" component={VideoPage} exact={true} />
         <Route path="/black-business-directory" component={BizDirectory} />
         <Route path="/books" component={BookList} />
         <Route path="/black-ceo-interviews" component={CEOInterviews} />

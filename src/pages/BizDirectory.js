@@ -16,7 +16,7 @@ const BizDirectory = () => {
 
   {/* Start Of API Call */}
   const siteURL =
-    "http://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=20";
+    "http://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {

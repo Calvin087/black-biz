@@ -7,42 +7,39 @@ const CEOInterviews = () => {
   {
     /* Start Of state */
   }
-  const [listings, setYTListings] = useState([]);
-  const [dave, setDave] = useState(["dave", "dave"]);
+  const [videoLstings, setVideoListings] = useState([]);
 
   {
     /* End Of state */
   }
 
-  {
-    /* Start Of API Call */
-  }
+   {/* Start Of API Call */}
   const siteURL =
-    "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL-jeZzL1fpWi6uHu8chQ-MFHIrXNAlLes&key=AIzaSyAY2i0_Y0WQDT2r63RBDj5hOvwaSQt3gtw";
+    "http://calvint2.sg-host.com/wp-json/wp/v2/Youtube?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {
-      const response = await fetch(siteURL);
+      const response = await fetch(siteURL)
 
-      if (!response.ok) {
+      if(!response.ok) {
         console.log("content not loaded");
-        return;
+        return
       }
 
-      const results = await response.json();
-      setYTListings(results.items);
+      const results = await response.json()
+      setVideoListings(results);
+      console.log(results);
     }
-    loadlistings();
-  }, []);
-  {
-    /* End Of API Call */
-  }
+    loadlistings()
+  }, [])
+{/* End Of API Call */}
 
   return (
     <div>
       <div className="sm:pt-6">
         <NavigationBar />
       </div>
+
       <HeroInnerPage
         bgColor={"#27444c"}
         title={"Entreprenuer & CEO Interviews."}
@@ -53,7 +50,7 @@ const CEOInterviews = () => {
       />
       {/* Start Of Cards */}
       <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
-        {listings.map((video) => (
+        {videoLstings.map((video) => (
           <CardYoutube key={video.id} {...video} />
         ))}
       </div>
@@ -63,4 +60,8 @@ const CEOInterviews = () => {
 };
 
 export default CEOInterviews;
+
+
+
+// https://affiliate-program.amazon.co.uk/home/widgets/Amazon-QuickLinker-Widget
 
