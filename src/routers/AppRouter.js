@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Link, Switch, withRouter } from "react-router-dom";
+
 import HomePage from '../pages/HomePage';
 import BizDirectory from '../pages/BizDirectory';
 import BookList from '../pages/BookList';
@@ -9,14 +10,14 @@ import VideoPage from '../pages/VideoPage'
 
 function AppRouter() {
     return (
-      <Switch>
-        <Route path="/" component={VideoPage} exact={true} />
-        <Route path="/black-business-directory" component={BizDirectory} />
-        <Route path="/books" component={BookList} />
-        <Route path="/black-ceo-interviews" component={CEOInterviews} />
-        <Route path="/online-education" component={OnlineEducation} />
-        <Route />
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={HomePage} exact={true} />
+          <Route path="/black-business-directory" component={BizDirectory} />
+          <Route path="/black-ceo-interviews" component={CEOInterviews} exact={true}/>
+          <Route path="/black-ceo-interviews/:slug" component={VideoPage} /><Route />
+        </Switch>
+      </BrowserRouter>
     );
 }
 

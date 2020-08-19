@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonUI from './ButtonUI'
+import ButtonUIExternal from './ButtonUIExternal'
 
 const CardBusinesses = (props) => {
   let clamp3 = {
@@ -73,7 +73,7 @@ const CardBusinesses = (props) => {
         </div>
 
         <div className="p-4">
-          <ButtonUI
+          <ButtonUIExternal
             borderCol={"#16213a"}
             content={"Visit Website"}
             color={"#16213a"}

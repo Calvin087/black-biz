@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ButtonUI = (props) => {
+const ButtonUIExternal = (props) => {
 
   return (
-    <Link to={{ pathname:`${props.baseURL}/${props.slug}`}}>
+    <a href={props.alink} target="_blank">
       <button
         className="text-blue-900 border-2 py-2 px-4"
         style={{ borderColor: props.borderCol, color: props.color }}
@@ -22,8 +22,8 @@ const ButtonUI = (props) => {
           <path d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
-    </Link>
+    </a>
   );
 };
 
-export default ButtonUI;
+export default ButtonUIExternal;

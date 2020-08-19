@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonUI from "../components/ButtonUI";
+import ButtonUIExternal from "../components/ButtonUIExternal";
 
 const CardEducation = () => {
   let clamp3 = {
@@ -38,7 +38,7 @@ const CardEducation = () => {
             around the world have created thousands of free online courses,
             popularly known as Massive Open Online Courses or MOOCs.
           </p>
-          <ButtonUI
+          <ButtonUIExternal
             borderCol={"#16213a"}
             content={"Read The Post"}
             color={"#16213a"}

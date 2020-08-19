@@ -50,12 +50,10 @@ function getListValues(a) {
 
 const filteredListings = listings.filter(
   (listing) =>
-    listing.acf.city.includes(dropDownCity) &&
-    listing.acf.categories.includes(dropDownCategories) &&
-    listing.acf.country.includes(dropDownCountry)
+  listing.acf.categories.includes(dropDownCategories) &&
+  listing.acf.city.includes(dropDownCity) &&
+  listing.acf.country.includes(dropDownCountry)
 );
-
-console.log(filteredListings.length);
 
 let cityList = getListValues("city");
 let countryList = getListValues("country");
@@ -95,7 +93,10 @@ let filteredCategories = [...new Set(categoriesList)];
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
           {filteredListings.length === 0 ? (
-            <h2 className="text-center text-4xl pt-4 sm:pt-8 text-gray-600">Choose an Industry to start your search</h2>
+            <div>
+            <h2 className="text-center text-4xl pt-4 sm:pt-8 text-gray-600">Choose an Industry & Country to get started</h2>
+            <p className="text-center text-1xl pt-2 sm:pt-4 text-gray-700">If you know a business that can fill this space, please send us their detail using <span className="font-bold text-blue-700">this form</span></p>
+            </div>
           ) : (
             filteredListings.map((listing) => (
               <CardBusinesses key={listing.id} {...listing} />

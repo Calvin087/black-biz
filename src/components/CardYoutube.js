@@ -1,6 +1,8 @@
 import React from "react";
+import ButtonUI from "./ButtonUI";
 
 const CardYoutube = (props) => {
+
 let clamp3 = {
   WebkitLineClamp: "3",
   overflow: "hidden",
@@ -14,8 +16,6 @@ let clamp2 = {
   display: "-webkit-box",
   WebkitBoxOrient: "vertical",
 };
-
-let iframe = '<iframe src=”https://www.youtube.com/embed/videoseries?list=PLRiOTYOXvFzaARHOdX5Q7aw70NLaIMPem” frameborder=”0″ allow=”accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture” allowfullscreen></iframe>'
 
   return (
     <div className="sm:w-1/4 p-2">
@@ -36,8 +36,15 @@ let iframe = '<iframe src=”https://www.youtube.com/embed/videoseries?list=PLRi
           </h2>
 
           <p className="text-sm text-gray-700 mb-4" style={clamp3}>
-            aaaaaaaaaaaa
+            {props.acf.description}
           </p>
+          <ButtonUI
+            borderCol={"#16213a"}
+            content={"View Series"}
+            color={"#16213a"}
+            baseURL={"black-ceo-interviews"}
+            slug={props.slug}
+          />
         </div>
       </div>
     </div>

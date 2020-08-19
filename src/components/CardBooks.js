@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonUI from "../components/ButtonUI";
+import ButtonUIExternal from "../components/ButtonUIExternal";
 
 const CardBooks = () => {
 
@@ -56,7 +56,7 @@ const CardBooks = () => {
         </div>
 
         <div className="p-4">
-          <ButtonUI
+          <ButtonUIExternal
             borderCol={"#16213a"}
             content={"Visit Amazon"}
             color={"#16213a"}
