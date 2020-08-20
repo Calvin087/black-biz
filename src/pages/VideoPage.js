@@ -9,6 +9,7 @@ const VideoPage = (props) => {
   const [videoDetails, setVideoDetails] = useState({})
   const [loaded, setLoaded] = useState(false)
   
+  
   {/* End Of state */}
 
   {/* Start Of API Call */}
@@ -43,7 +44,7 @@ console.log(videoDetails);
       {loaded !== true ? (
         <h1>Please Wait</h1>
       ) : (
-        <div className="container m-auto p-4 sm:pt-20 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
+        <div className="container m-auto p-8 sm:pt-20 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
           <div className=" w-full sm:w-1/2">
             <iframe
               className="w-full sm:w-full"
@@ -59,7 +60,9 @@ console.log(videoDetails);
             <p className="text-1xl pb-8 font-thin text-gray-600">
               by {videoDetails.acf.channelname}
             </p>
-            <p className="pb-4">{videoDetails.acf.description}</p>
+            <p className="pb-4">
+              {videoDetails.acf.description}
+            </p>
           </div>
         </div>
       )}
