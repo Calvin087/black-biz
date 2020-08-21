@@ -42,8 +42,7 @@ let clamp2 = {
             borderCol={"#16213a"}
             content={"View Series"}
             color={"#16213a"}
-            baseURL={"black-ceo-interviews"}
-            slug={props.slug}
+            link={`/black-ceo-interviews/${props.slug}`}
           />
         </div>
       </div>

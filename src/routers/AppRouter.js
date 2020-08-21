@@ -12,10 +12,12 @@ function AppRouter() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={BookList} exact={true} />
+          <Route path="/" component={HomePage} exact={true} />
           <Route path="/black-business-directory" component={BizDirectory} />
+          <Route path="/essential-reading" component={BookList} />
           <Route path="/black-ceo-interviews" component={CEOInterviews} exact={true}/>
-          <Route path="/black-ceo-interviews/:slug" component={VideoPage} /><Route />
+          <Route path="/black-ceo-interviews/:slug" component={VideoPage} />
+          <Route path="/online-education" component={OnlineEducation} />
         </Switch>
       </BrowserRouter>
     );

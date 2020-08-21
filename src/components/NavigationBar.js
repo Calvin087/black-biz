@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 import LogoBarOnly from '../components/LogoBarOnly'
 
 const NavigationBar = (props) => {
@@ -35,21 +36,18 @@ const NavigationBar = (props) => {
         {/* Start of Nav Links */}
         <div className={isOpen ? "block" : "hidden sm:block"}>
           <div className="px-2 sm:flex">
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            <Link to={"/black-business-directory"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
               Business Listings
-            </a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            </Link>
+            <Link to={"/essential-reading"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
               Finance Books
-            </a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            </Link>
+            <Link to={"/black-ceo-interviews"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
               CEO Interviews
-            </a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            </Link>
+            <Link to={"/online-education"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
               Education
-            </a>
-            <a className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
-              Blog
-            </a>
+            </Link>
           </div>
         </div>
         {/* End of Nav Links */}

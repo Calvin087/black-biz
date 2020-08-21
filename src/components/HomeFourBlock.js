@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HomeFourBlock = (props) => {
     return (
@@ -20,17 +21,19 @@ const HomeFourBlock = (props) => {
           <div>
             <p className="text-white font-light text-sm">
               {props.content}
-              <svg
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 inline ml-2"
-              >
-                <path d="M9 5l7 7-7 7"></path>
-              </svg>
+              <Link to={props.link}>
+                <svg
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-6 inline ml-2"
+                >
+                  <path d="M9 5l7 7-7 7"></path>
+                </svg>
+              </Link>
             </p>
           </div>
           {/* End Of Block Content */}

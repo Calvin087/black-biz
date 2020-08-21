@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ButtonUI = (props) => {
 
   return (
-    <Link to={{ pathname:`${props.baseURL}/${props.slug}`}}>
+    <Link to={props.link}>
       <button
         className="text-blue-900 border-2 py-2 px-4"
         style={{ borderColor: props.borderCol, color: props.color }}

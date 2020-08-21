@@ -1,7 +1,7 @@
 import React from "react";
 import LogoBarOnly from "../components/LogoBarOnly";
 import HomeFourBlock from "../components/HomeFourBlock";
-import FullWidthIntroLeft from "../components/FullWidthIntroLeft";
+import FullWidthIntro from "../components/FullWidthIntro";
 import ButtonUI from "../components/ButtonUI";
 import Footer from "../components/Footer";
 
@@ -25,12 +25,6 @@ const HomePage = () => {
             We aim to curate and share the most powerful content to aid in the
             success of the generations that will follow us.
           </p>
-
-          <ButtonUI
-            borderCol={"#16213a"}
-            content={"Get Started"}
-            color={"#16213a"}
-          />
         </div>
         {/* End Of Hero Left */}
 
@@ -51,27 +45,31 @@ const HomePage = () => {
           bgColour={"#16213a"}
           title={"Community Support"}
           content={"Free, Black owned business listings"}
+          link={"/black-business-directory"}
         />
         <HomeFourBlock
           bgColour={"#1e3142"}
-          title={"Financial Literacy"}
-          content={"The missingschool lessons"}
+          title={"Essential Reading"}
+          content={"The missing money lessons"}
+          link={"/essential-reading"}
         />
         <HomeFourBlock
           bgColour={"#27444c"}
           title={"Positive Role Models"}
           content={"Pure inspirationfrom black CEOs"}
+          link={"/black-ceo-interviews"}
         />
         <HomeFourBlock
           bgColour={"#335446"}
           title={"Free Education"}
           content={"Learn more toearn more"}
+          link={"/online-education"}
         />
       </div>
 
       {/* End Of Four Block */}
       <div className="container sm:px-16 sm:m-auto">
-        <FullWidthIntroLeft
+        <FullWidthIntro
           bgColour={"#16213a"}
           title={"Local Black Owned Business List."}
           content={
@@ -80,8 +78,9 @@ const HomePage = () => {
           image={"../images/full-width-intro-biz.jpg"}
           buttonContent={"Shop Local"}
           order={"row-reverse"}
+          link={"/black-business-directory"}
         />
-        <FullWidthIntroLeft
+        <FullWidthIntro
           bgColour={"#1e3142"}
           title={"Books on Essential Financial Literacy"}
           content={
@@ -89,8 +88,9 @@ const HomePage = () => {
           }
           image={"../images/full-width-intro-books.jpg"}
           buttonContent={"Start Investing"}
+          link={"/essential-reading"}
         />
-        <FullWidthIntroLeft
+        <FullWidthIntro
           bgColour={"#27444c"}
           title={"Entreprenuer & CEO Interviews"}
           content={
@@ -98,9 +98,10 @@ const HomePage = () => {
           }
           image={"../images/full-width-intro-ceo.jpg"}
           buttonContent={"Get Inspired"}
+          link={"/black-ceo-interviews"}
           order={"row-reverse"}
         />
-        <FullWidthIntroLeft
+        <FullWidthIntro
           bgColour={"#335446"}
           title={"Online Courses & Free Education"}
           content={
@@ -108,6 +109,7 @@ const HomePage = () => {
           }
           image={"../images/full-width-intro-edu.jpg"}
           buttonContent={"Earn More"}
+          link={"/online-education"}
         />
       </div>
     </div>
