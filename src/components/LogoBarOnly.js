@@ -1,14 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LogoBarOnly = (props) => {
     return (
       <div>
         <div id="logo">
-          <img
-            src="../images/black-logo.svg"
-            width={props.size}
-            style={{ margin: props.center, padding: props.padding }}
-          />
+          <Link to={`/`}>
+            <img
+              src="../images/black-logo.svg"
+              width={props.size}
+              style={{ margin: props.center, padding: props.padding }}
+            />
+          </Link>
         </div>
       </div>
     );

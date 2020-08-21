@@ -12,7 +12,7 @@ const HeroInnerPage = (props) => {
           >
             {props.title}
           </h2>
-          <p className="text-white font-thin sm:text-xl sm:mb-10">
+          <p className="text-white font-thin sm:text-xl sm:mb-4">
             {props.content}
           </p>
         </div>
