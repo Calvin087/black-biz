@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "../components/NavigationBar";
 import CardBooks from "../components/CardBooks";
 import HeroInnerPage from "../components/HeroInnerPage";
+import LoadingIcon from "../components/LoadingIcon";
 
 const BookList = () => {
   {
     /* Start Of state */
   }
   const [bookLstings, setBookLstings] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   {
     /* End Of state */
@@ -29,6 +31,7 @@ const BookList = () => {
 
       const results = await response.json();
       setBookLstings(results);
+      setLoaded(true);
       
     }
     loadlistings();
@@ -36,7 +39,6 @@ const BookList = () => {
   {
     /* End Of API Call */
   }
-console.log(bookLstings);
 
   return (
     <div>
@@ -53,11 +55,17 @@ console.log(bookLstings);
         bgImage={`url("../images/full-width-intro-books.jpg")`}
       />
       {/* Start Of Cards */}
-      <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
-        {bookLstings.map((book) => (
-          <CardBooks key={book.id} {...book} />
-        ))}
-      </div>
+
+      {loaded !== true ? (
+        <LoadingIcon />
+      ) : (
+        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
+          {bookLstings.map((book) => (
+            <CardBooks key={book.id} {...book} />
+          ))}
+        </div>
+      )}
+
       {/* End Of Cards */}
     </div>
   );

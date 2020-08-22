@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import NavigationBar from "../components/NavigationBar";
-import CardBooks from "../components/CardBooks";
+import CardEducation from "../components/CardEducation";
 import HeroInnerPage from "../components/HeroInnerPage";
+import LoadingIcon from '../components/LoadingIcon'
 
 const OnlineEducation = () => {
   {
     /* Start Of state */
   }
-  const [bookLstings, setBookLstings] = useState([]);
+  const [eduLstings, setEduLstings] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   {
     /* End Of state */
@@ -16,7 +18,7 @@ const OnlineEducation = () => {
   {
     /* Start Of API Call */
   }
-  const siteURL = "http://calvint2.sg-host.com/wp-json/wp/v2/books?per_page=50";
+  const siteURL = "http://calvint2.sg-host.com/wp-json/wp/v2/education?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {
@@ -28,14 +30,14 @@ const OnlineEducation = () => {
       }
 
       const results = await response.json();
-      setBookLstings(results);
+      setEduLstings(results);
+      setLoaded(true);
     }
     loadlistings();
   }, []);
   {
     /* End Of API Call */
   }
-  console.log(bookLstings);
 
   return (
     <div>
@@ -44,24 +46,26 @@ const OnlineEducation = () => {
       </div>
 
       <HeroInnerPage
-        bgColor={"#1e3142"}
-        title={"Essential Reading"}
+        bgColor={"#335446"}
+        title={"Online Education"}
         content={
-          "Financial literacy is the key to generational success and continued community growth. Our collection is for both children and adults."
+          "Many industries are lacking diversity. Skill up and change the game with our list of free courses and learning resources."
         }
-        bgImage={`url("../images/full-width-intro-books.jpg")`}
+        bgImage={`url("../images/full-width-intro-edu.jpg")`}
       />
       {/* Start Of Cards */}
-      <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
-        {bookLstings.map((book) => (
-          <CardBooks key={book.id} {...book} />
-        ))}
-      </div>
+      {loaded !== true ? (
+        <LoadingIcon />
+      ) : (
+        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
+          {eduLstings.map((edu) => (
+            <CardEducation key={edu.id} {...edu} />
+          ))}
+        </div>
+      )}
       {/* End Of Cards */}
     </div>
   );
 };
 
 export default OnlineEducation;
-
-// https://affiliate-program.amazon.co.uk/home/widgets/Amazon-QuickLinker-Widget

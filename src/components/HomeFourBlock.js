@@ -20,8 +20,8 @@ const HomeFourBlock = (props) => {
           {/* Start Of Block Content */}
           <div>
             <p className="text-white font-light text-sm">
+            <Link to={props.link}>
               {props.content}
-              <Link to={props.link}>
                 <svg
                   fill="none"
                   stroke-linecap="round"

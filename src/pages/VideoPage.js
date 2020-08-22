@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import NavigationBar from "../components/NavigationBar";
+import LoadingIcon from '../components/LoadingIcon'
 
 const VideoPage = (props) => {
 
@@ -28,6 +29,7 @@ const VideoPage = (props) => {
       const results = await response.json()
       setVideoDetails(results[0])
       setLoaded(true)
+
     }
     loadlistings()
   }, [])
@@ -42,7 +44,7 @@ console.log(videoDetails);
       </div>
 
       {loaded !== true ? (
-        <h1>Please Wait</h1>
+        <LoadingIcon />
       ) : (
         <div className="container m-auto p-8 sm:pt-20 sm:px-16 sm:flex sm:flex-wrap sm:justify-between">
           <div className=" w-full sm:w-1/2 sm:pt-2">
@@ -63,9 +65,9 @@ console.log(videoDetails);
 
             <img className="w-24 pb-4" src="../images/adblock.png" />
             <p className="pb-8 text-xs text-red-800">
-              <span className="font-bold">Warning:</span> AdBlock will stop this video series from
-              playing on this page. If you see playback errors, AdBlock would be
-              the reason.
+              <span className="font-bold">Warning:</span> AdBlock will stop this
+              video series from playing on this page. If you see playback
+              errors, AdBlock would be the reason.
             </p>
 
             <p className="font-bold pb-2">About This Series:</p>

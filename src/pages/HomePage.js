@@ -105,7 +105,7 @@ const HomePage = () => {
           bgColour={"#335446"}
           title={"Online Courses & Free Education"}
           content={
-            "Software development is a lucrative career that is lacking diversity. Change the industry with our list of free courses and learning resources."
+            "Many industries are lacking diversity. Skill up and change the game with our list of free courses and learning resources."
           }
           image={"../images/full-width-intro-edu.jpg"}
           buttonContent={"Earn More"}

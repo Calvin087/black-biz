@@ -25,7 +25,7 @@ const CardBusinesses = (props) => {
         <div>
           <img
             className="w-full h-48 object-cover object-center "
-            src={props.acf.bizimage.url}
+            src={props.acf.bizimage.sizes.medium}
           />
         </div>
 

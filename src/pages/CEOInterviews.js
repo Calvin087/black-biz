@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "../components/NavigationBar";
 import CardYoutube from "../components/CardYoutube";
 import HeroInnerPage from "../components/HeroInnerPage";
+import LoadingIcon from '../components/LoadingIcon'
 
 const CEOInterviews = () => {
   {
     /* Start Of state */
   }
   const [videoLstings, setVideoListings] = useState([]);
-
+  const [loaded, setLoaded] = useState(false);
   {
     /* End Of state */
   }
@@ -28,7 +29,7 @@ const CEOInterviews = () => {
 
       const results = await response.json()
       setVideoListings(results);
-      console.log(results);
+      setLoaded(true);
     }
     loadlistings()
   }, [])
@@ -49,11 +50,17 @@ const CEOInterviews = () => {
         bgImage={`url("../images/full-width-intro-ceo.jpg")`}
       />
       {/* Start Of Cards */}
-      <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
-        {videoLstings.map((video) => (
-          <CardYoutube key={video.id} {...video} />
-        ))}
-      </div>
+
+      {loaded !== true ? (
+        <LoadingIcon />
+      ) : (
+        <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
+          {videoLstings.map((video) => (
+            <CardYoutube key={video.id} {...video} />
+          ))}
+        </div>
+      )}
+
       {/* End Of Cards */}
     </div>
   );

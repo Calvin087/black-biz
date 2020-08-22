@@ -26,7 +26,7 @@ let clamp2 = {
         <div>
           <img
             className="w-full h-48 object-cover object-center"
-            src={props.acf.thumbnail.url}
+            src={props.acf.thumbnail.sizes.medium}
           />
         </div>
 

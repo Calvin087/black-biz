@@ -40,13 +40,13 @@ const NavigationBar = (props) => {
               Business Listings
             </Link>
             <Link to={"/essential-reading"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
-              Finance Books
+              Essential Reading
             </Link>
             <Link to={"/black-ceo-interviews"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
               CEO Interviews
             </Link>
             <Link to={"/online-education"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
-              Education
+              Online Education
             </Link>
           </div>
         </div>
