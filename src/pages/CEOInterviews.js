@@ -16,7 +16,7 @@ const CEOInterviews = () => {
 
    {/* Start Of API Call */}
   const siteURL =
-    "http://calvint2.sg-host.com/wp-json/wp/v2/Youtube?per_page=50";
+    "https://calvint2.sg-host.com/wp-json/wp/v2/Youtube?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {

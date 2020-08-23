@@ -10,13 +10,13 @@ const BizDirectory = () => {
   const [listings, setListings] = useState([])
   const [dropDownCity, setDropDownCity] = useState([]);
   const [dropDownCountry, setDropDownCountry] = useState([]);
-  const [dropDownCategories, setDropDownCategories] = useState([]);
+  const [dropDownCategories, setDropDownCategories] = useState("Restaurant");
 
   {/* End Of state */}
 
   {/* Start Of API Call */}
   const siteURL =
-    "http://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=50";
+    "https://calvint2.sg-host.com/wp-json/wp/v2/business_listings?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {
@@ -50,7 +50,7 @@ function getListValues(a) {
 
 const filteredListings = listings.filter(
   (listing) =>
-  listing.acf.categories.includes(dropDownCategories) &&
+  listing.acf.categories.includes(dropDownCategories) && 
   listing.acf.city.includes(dropDownCity) &&
   listing.acf.country.includes(dropDownCountry)
 );
@@ -92,10 +92,11 @@ let filteredCategories = [...new Set(categoriesList)];
 
         {/* Start Of Cards */}
         <div className="container m-auto p-4 sm:px-16 sm:flex sm:flex-wrap sm:justify-center">
-          {filteredListings.length === 0 ? (
+          
+        {filteredListings.length === 0 ? (
             <div>
             <h2 className="text-center text-4xl pt-4 sm:pt-8 text-gray-600">Choose an Industry & Country to get started</h2>
-            <p className="text-center text-1xl pt-2 sm:pt-4 text-gray-700">If you know a business that can fill this space, please send us their detail using <span className="font-bold text-blue-700">this form</span></p>
+            <p className="text-center text-1xl pt-2 sm:pt-4 text-gray-700">If you know a business that can fill this space, please send us their detail using <a href="https://forms.gle/WjmG43wWGMmMUSJk6" target="_blank"><span className="font-bold text-blue-700">this form</span></a></p>
             </div>
           ) : (
             filteredListings.map((listing) => (

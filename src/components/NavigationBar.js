@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 import LogoBarOnly from '../components/LogoBarOnly'
+import ScrollToTop from "../components/ScrollToTop";
 
 const NavigationBar = (props) => {
 
@@ -8,6 +9,7 @@ const NavigationBar = (props) => {
 
     return (
       <div className="container sm:m-auto sm:flex sm:justify-between sm:px-12">
+        <ScrollToTop />
         <div className="flex items-center justify-between p-4">
           <LogoBarOnly size={"150"} />
 
@@ -36,16 +38,28 @@ const NavigationBar = (props) => {
         {/* Start of Nav Links */}
         <div className={isOpen ? "block" : "hidden sm:block"}>
           <div className="px-2 sm:flex">
-            <Link to={"/black-business-directory"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            <Link
+              to={"/black-business-directory"}
+              className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400"
+            >
               Business Listings
             </Link>
-            <Link to={"/essential-reading"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            <Link
+              to={"/essential-reading"}
+              className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400"
+            >
               Essential Reading
             </Link>
-            <Link to={"/black-ceo-interviews"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            <Link
+              to={"/black-ceo-interviews"}
+              className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400"
+            >
               CEO Interviews
             </Link>
-            <Link to={"/online-education"} className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400">
+            <Link
+              to={"/online-education"}
+              className="px-2 py-1 sm:mt-4 sm:ml-4 block rounded hover:bg-gray-400"
+            >
               Online Education
             </Link>
           </div>

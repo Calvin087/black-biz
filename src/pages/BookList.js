@@ -18,7 +18,7 @@ const BookList = () => {
   {
     /* Start Of API Call */
   }
-  const siteURL = "http://calvint2.sg-host.com/wp-json/wp/v2/books?per_page=50";
+  const siteURL = "https://calvint2.sg-host.com/wp-json/wp/v2/books?per_page=50";
 
   useEffect(() => {
     async function loadlistings() {

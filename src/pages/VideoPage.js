@@ -15,7 +15,7 @@ const VideoPage = (props) => {
 
   {/* Start Of API Call */}
   const siteURL =
-    `http://calvint2.sg-host.com/wp-json/wp/v2/youtube?slug=${slug}/`;
+    `https://calvint2.sg-host.com/wp-json/wp/v2/youtube?slug=${slug}/`;
 
   useEffect(() => {
     async function loadlistings() {
@@ -34,8 +34,6 @@ const VideoPage = (props) => {
     loadlistings()
   }, [])
 {/* End Of API Call */}
-
-console.log(videoDetails);
 
   return (
     <div>

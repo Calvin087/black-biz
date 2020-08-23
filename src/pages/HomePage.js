@@ -21,7 +21,7 @@ const HomePage = () => {
             Supporting The Black Economy.
           </h2>
 
-          <p className="text-l text-gray-800 font-thin mb-8 sm:text-2xl">
+          <p className="text-xl text-gray-800 font-light mb-8 sm:text-2xl">
             We aim to curate and share the most powerful content to aid in the
             success of the generations that will follow us.
           </p>
